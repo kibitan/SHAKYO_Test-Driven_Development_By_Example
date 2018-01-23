@@ -1,7 +1,7 @@
-require "minitest/autorun"
+require "test/unit"
 require_relative 'dollar'
 
-class TestMoney < Minitest::Test
+class TestMoney < Test::Unit::TestCase
   def test_multiplication
     five = Dollar.new(5)
     five.time(2)
