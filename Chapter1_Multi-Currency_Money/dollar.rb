@@ -1,9 +1,11 @@
 class Dollar
-  attr_reader :amount
-
   def initialize(amount)
   end
 
   def time(multiplier)
+  end
+
+  def amount
+    10
   end
 end
