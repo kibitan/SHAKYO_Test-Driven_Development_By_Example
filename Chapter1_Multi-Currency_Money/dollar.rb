@@ -2,7 +2,7 @@ class Dollar
   def initialize(amount)
   end
 
-  def time(multiplier)
+  def times(multiplier)
   end
 
   def amount
