@@ -4,3 +4,7 @@
  * [ ] #amount を private にする
  * [x] Dollar の副作用をどうする？
  * [ ] Money の丸め処理をどうする？
+ * [x] #equals
+ * [ ] #hash_code
+ * [ ] null との等価性比較
+ * [ ] 他のオブジェクトとの等価性比較
