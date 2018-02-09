@@ -1,5 +1,6 @@
-class Dollar
-  attr_reader :amount
+require './money'
+
+class Dollar < Money
   def initialize(amount)
     @amount = amount
   end
@@ -7,12 +8,4 @@ class Dollar
   def times(multiplier)
     Dollar.new(amount * multiplier)
   end
-
-  def equals(dollar)
-    amount == dollar.dup.amount
-  end
-  # NOTE:
-  #  `assert_equal` will call #== method for comparison,
-  #  make compatible with Java sample code
-  alias == :equals
 end
