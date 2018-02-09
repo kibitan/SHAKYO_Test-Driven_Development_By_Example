@@ -1,0 +1,1 @@
+ This is [SHAKYO](http://sanpai-japan.com/2016/08/18/shakyo/) of [テスト駆動開発](https://www.amazon.co.jp/dp/B077D2L69C), japanese translation of [Test Driven Development: By Example ](https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530) by Kent Beck
