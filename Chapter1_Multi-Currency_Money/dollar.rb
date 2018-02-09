@@ -9,7 +9,7 @@ class Dollar
   end
 
   def equals(dollar)
-    amount == dollar.amount
+    amount == dollar.dup.amount
   end
   # NOTE:
   #  `assert_equal` will call #== method for comparison,
