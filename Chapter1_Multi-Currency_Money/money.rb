@@ -16,12 +16,12 @@ class Money
     @currency = currency
   end
 
-  def time
-    raise NotImplementedError
+  def times(multiplier)
+    self.class.new(amount * multiplier, currency)
   end
 
   def equals(money)
-    amount == money.dup.amount && self.class == money.class
+    amount == money.amount && self.currency == money.currency
   end
   # NOTE:
   #  `assert_equal` will call #== method for comparison,
