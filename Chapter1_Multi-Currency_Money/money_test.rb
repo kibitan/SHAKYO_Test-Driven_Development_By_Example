@@ -15,19 +15,7 @@ class TestMoney < Minitest::Test
   def test_equality
     assert_equal Money.dollar(5).equals(Money.dollar(5)), true
     assert_equal Money.dollar(5).equals(Money.dollar(6)), false
-    assert_equal Money.franc(5).equals(Money.franc(5)), true
-    assert_equal Money.franc(5).equals(Money.franc(6)), false
     assert_equal Money.franc(5).equals(Money.dollar(5)), false
-  end
-
-  def test_different_class_equality
-    assert_equal Money.new(10, 'CHF').equals(Franc.new(10, 'CHF')), true
-  end
-
-  def test_franc_multiplication
-    five = Money.franc(5)
-    assert_equal Money.franc(10), five.times(2)
-    assert_equal Money.franc(15), five.times(3)
   end
 
   def test_currency

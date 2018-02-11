@@ -3,11 +3,11 @@ class Money
 
   class << self
     def dollar(amount)
-      Dollar.new(amount, 'USD')
+      new(amount, 'USD')
     end
 
     def franc(amount)
-      Franc.new(amount, 'CHF')
+      new(amount, 'CHF')
     end
   end
 
@@ -28,6 +28,3 @@ class Money
   #  make compatible with Java sample code
   alias == :equals
 end
-
-require 'dollar'
-require 'franc'
