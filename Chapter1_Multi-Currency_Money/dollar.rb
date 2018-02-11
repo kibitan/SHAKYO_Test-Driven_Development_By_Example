@@ -1,4 +1,4 @@
-require './money'
+require 'money'
 
 class Dollar < Money
   def initialize(amount)

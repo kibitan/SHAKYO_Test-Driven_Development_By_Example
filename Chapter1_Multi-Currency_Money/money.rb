@@ -20,5 +20,5 @@ class Money
   alias == :equals
 end
 
-require './dollar'
-require './franc'
+require 'dollar'
+require 'franc'
