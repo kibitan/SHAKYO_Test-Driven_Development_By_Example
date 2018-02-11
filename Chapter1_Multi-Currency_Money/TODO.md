@@ -14,4 +14,5 @@
  * [x] equals の 一般化
  * [ ] times の 一般化
  * [x] Dollar と Franc を比較する
- * [ ] 通貨(Currency)の概念
+ * [x] 通貨(Currency)の概念
+ * [ ] test_franc_multiplicationを削除する？

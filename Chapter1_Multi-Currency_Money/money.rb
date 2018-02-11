@@ -1,14 +1,23 @@
 class Money
-  attr_reader :amount
+  attr_reader :amount, :currency
 
   class << self
     def dollar(amount)
-      Dollar.new(amount)
+      Dollar.new(amount, 'USD')
     end
 
     def franc(amount)
-      Franc.new(amount)
+      Franc.new(amount, 'CHF')
     end
+  end
+
+  def initialize(amount, currency)
+    @amount = amount
+    @currency = currency
+  end
+
+  def time
+    raise NotImplementedError
   end
 
   def equals(money)
