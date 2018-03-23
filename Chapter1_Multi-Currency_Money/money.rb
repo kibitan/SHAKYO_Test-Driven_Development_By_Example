@@ -27,4 +27,8 @@ class Money
   #  `assert_equal` will call #== method for comparison,
   #  make compatible with Java sample code
   alias == :equals
+
+  def plus(added)
+    self.class.new(amount + added.amount, currency)
+  end
 end
