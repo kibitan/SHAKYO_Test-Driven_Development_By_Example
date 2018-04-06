@@ -29,6 +29,10 @@ class Money
   alias == :equals
 
   def plus(added)
-    self.class.new(amount + added.amount, currency)
+    Sum.new(self, added)
+  end
+
+  def reduce(to)
+    return self
   end
 end

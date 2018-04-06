@@ -17,4 +17,8 @@
  * [x] test_franc_multiplicationを削除する？
 
 ### [ ] $ 5 + 10 CHF = $ 10（ レート が 2: 1 の 場合）
- * $ 5 + $ 5 = $ 10
+ * [x] $ 5 + $ 5 = $ 10
+ * [ ] $ 5 + $ 5 が Money を返す
+ * [x] Bank.reduce(Money)
+ * [ ] Money を変換して換算を行う
+ * [ ] Reduce(Bank, String)
