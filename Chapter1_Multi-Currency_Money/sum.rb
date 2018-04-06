@@ -6,7 +6,7 @@ class Sum
     @added  = added
   end
 
-  def reduce(to)
+  def reduce(bank, to)
     Money.new(augend.amount + added.amount, to)
   end
 end

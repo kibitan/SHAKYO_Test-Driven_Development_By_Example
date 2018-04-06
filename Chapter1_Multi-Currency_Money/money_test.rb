@@ -6,6 +6,7 @@ $LOAD_PATH.unshift(File.expand_path('../', __FILE__))
 require 'money'
 require 'bank'
 require 'sum'
+require 'pair'
 
 class TestMoney < Minitest::Test
   def test_multiplication
@@ -52,5 +53,16 @@ class TestMoney < Minitest::Test
     bank = Bank.new
     result = bank.reduce(Money.dollar(1), 'USD')
     assert_equal Money.dollar(1), result
+  end
+
+  def test_reduce_money_different_currency
+    bank = Bank.new
+    bank.add_rate('CHF', 'USD', 2)
+    result = bank.reduce(Money.franc(2), 'USD')
+    assert_equal Money.dollar(1), result
+  end
+
+  def test_indentity_rate
+    assert_equal 1, Bank.new.rate('USD', 'USD')
   end
 end
