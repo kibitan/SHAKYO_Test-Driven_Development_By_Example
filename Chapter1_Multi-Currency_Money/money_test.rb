@@ -65,4 +65,13 @@ class TestMoney < Minitest::Test
   def test_indentity_rate
     assert_equal 1, Bank.new.rate('USD', 'USD')
   end
+
+  def test_mixed_addition
+    five_buckes = Money.dollar(5)
+    ten_francs  = Money.franc(10)
+    bank = Bank.new
+    bank.add_rate('CHF', 'USD', 2)
+    result = bank.reduce(five_buckes.plus(ten_francs), 'USD')
+    assert_equal Money.dollar(10), result
+  end
 end
