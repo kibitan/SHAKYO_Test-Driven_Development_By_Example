@@ -12,5 +12,10 @@ class Sum
   end
 
   def plus(added)
+    Sum.new(self, added)
+  end
+
+  def times(multiplier)
+    Sum.new(@augend.times(multiplier), @added.times(multiplier))
   end
 end
